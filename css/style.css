@@ -17,11 +17,29 @@ body {
   font-size: 1.6rem;
 }
 
+/*------------
+Generals
+-------------*/
+
 button {
   border: none;
   background-color: transparent;
   padding: 0.5rem 1rem;
   color: #fff;
+  cursor: pointer;
+}
+
+button.primary {
+  background-color: #0061ff;
+  transition: background-color 500ms ease-in-out;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 /*------------
@@ -37,12 +55,48 @@ header > * {
   padding: 1.5rem 2rem;
 }
 
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li a {
+  text-transform: capitalize;
+  color: #000;
+  font-weight: 400;
+}
+
+header nav ul li + li {
+  margin-left: 2rem;
+}
+
+/*------------
+Animations / effects
+-------------*/
+button.primary:hover {
+  background-color: #3781f8;
+}
+
+header nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 0.2rem;
+  margin-top: 0.5rem;
+  display: block;
+  background-color: #0061ff;
+  transition: width 800ms ease-in-out;
+}
+
+header nav ul li:hover a:not(#logo):after {
+  width: 100%;
+}
 /*------------
 Debug
 -------------*/
-.debug header {
-  background-color: aqua;
-}
+/* .debug header {
+  border: 1px solid red;
+} */
+/*
 .debug header > * {
   background-color: blueviolet;
-}
+} */
