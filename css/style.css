@@ -15,6 +15,7 @@ Reset
 
 body {
   font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
 }
 
 /*------------
@@ -28,7 +29,7 @@ Generals
 button {
   border: none;
   background-color: transparent;
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1.3rem;
   color: #fff;
   cursor: pointer;
 }
@@ -44,6 +45,10 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+img {
+  width: 100%;
 }
 
 /*------------
@@ -83,13 +88,15 @@ section.hero {
 
 section.hero .hero-container {
   position: relative;
-  top: 8rem;
+  top: 8vh;
 }
 
-section.hero .hero-container .title {
-  font-size: 5rem;
-  line-height: 5rem;
+section.hero .hero-container h1.title {
+  font-size: 6rem;
+  line-height: 8rem;
   padding-block: 2rem;
+  margin-bottom: 3rem;
+  padding-right: 5rem;
 }
 
 section.hero .hero-container .hero-bottom {
@@ -99,21 +106,24 @@ section.hero .hero-container .hero-bottom {
 section.hero .hero-container .hero-bottom .left {
   width: 40%;
   padding-right: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 section.hero .hero-container .hero-bottom .left p {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 section.hero .hero-container .hero-bottom .left span {
+  margin-top: 2rem;
+  margin-bottom: 8rem;
   display: block;
-  margin-block: 2.5rem;
 }
 
-section.hero .hero-container .hero-bottom .left span {
-  display: block;
-  margin-top: 2.5rem;
-  margin-bottom: 3rem;
+section.hero .hero-container .hero-bottom .left .hero-icon {
+  margin-bottom: 8rem;
+  font-size: 3.2rem;
 }
 
 section.hero .hero-container .hero-bottom .right {
@@ -151,10 +161,10 @@ Debug
   background-color: blueviolet;
 } */
 
-.debug section.hero {
+/* .debug section.hero {
   height: 60vh;
-}
-.debug section.hero .big-container {
+} */
+/* .debug section.hero .big-container {
   border: 1px solid blue;
   min-height: 100%;
 }
@@ -169,4 +179,4 @@ Debug
 
 .debug section.hero .hero-container .hero-bottom > * {
   border: 1px solid black;
-}
+} */
