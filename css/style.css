@@ -20,6 +20,10 @@ body {
 /*------------
 Generals
 -------------*/
+.big-container {
+  max-width: 120rem;
+  margin-inline: auto;
+}
 
 button {
   border: none;
@@ -71,6 +75,52 @@ header nav ul li + li {
 }
 
 /*------------
+Main
+-------------*/
+section.hero {
+  background-color: #b4d0e7;
+}
+
+section.hero .hero-container {
+  position: relative;
+  top: 8rem;
+}
+
+section.hero .hero-container .title {
+  font-size: 5rem;
+  line-height: 5rem;
+  padding-block: 2rem;
+}
+
+section.hero .hero-container .hero-bottom {
+  display: flex;
+}
+
+section.hero .hero-container .hero-bottom .left {
+  width: 40%;
+  padding-right: 4rem;
+}
+
+section.hero .hero-container .hero-bottom .left p {
+  margin-bottom: 2.5rem;
+}
+
+section.hero .hero-container .hero-bottom .left span {
+  display: block;
+  margin-block: 2.5rem;
+}
+
+section.hero .hero-container .hero-bottom .left span {
+  display: block;
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+section.hero .hero-container .hero-bottom .right {
+  width: 60%;
+}
+
+/*------------
 Animations / effects
 -------------*/
 button.primary:hover {
@@ -100,3 +150,23 @@ Debug
 .debug header > * {
   background-color: blueviolet;
 } */
+
+.debug section.hero {
+  height: 60vh;
+}
+.debug section.hero .big-container {
+  border: 1px solid blue;
+  min-height: 100%;
+}
+
+.debug section.hero .big-container > * {
+  border: 1px solid green;
+}
+
+.debug section.hero .title {
+  font-weight: bold;
+}
+
+.debug section.hero .hero-container .hero-bottom > * {
+  border: 1px solid black;
+}
