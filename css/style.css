@@ -60,6 +60,11 @@ img {
   width: 100%;
 }
 
+.underline {
+  text-decoration: underline;
+  color: #0061ff;
+}
+
 /*------------
 Header
 -------------*/
@@ -159,13 +164,16 @@ section.offers h2 {
 }
 
 /*----cards planes-----*/
+.offers .plans-tipe * {
+  cursor: pointer;
+}
 .offers .plan-cards {
   display: flex;
 }
 
 .offers .plan-cards .card {
   width: calc((100% - 4%) / 3);
-  border: 0.1rem solid #ccc;
+  border: 0.1rem solid #ebebec;
 }
 
 .offers .plan-cards .card:nth-child(2) {
@@ -175,7 +183,7 @@ section.offers h2 {
 .offers .plan-cards .card .card-title {
   text-align: center;
   padding-block: 1rem;
-  border-bottom: 0.1rem solid #ccc;
+  border-bottom: 0.1rem solid #ebebec;
 }
 
 .offers .card .plane-info,
@@ -187,13 +195,44 @@ section.offers h2 {
   margin-block: 2.5rem;
 }
 
+.offers .card .plane-info .price h3 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+.offers .card .plane-info .price span.value {
+  font-weight: 600;
+}
+
+.offers .card .plane-info .price span.frequency {
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+}
+
 .offers .card .plane-info .plane-details {
   margin-block: 2.5rem;
+}
+
+.offers .card .plane-info .plane-details p {
+  margin-bottom: 1rem;
+}
+.offers .card .plane-info .plane-details p i {
+  font-size: 1.4rem;
+  margin-right: 0.5rem;
 }
 
 .offers .card .plane-info button {
   margin-block: 2.5rem;
   width: 100%;
+}
+
+.offers .card .plane-info::after {
+  content: "";
+  width: 5rem;
+  height: 0.1rem;
+  display: block;
+  margin-top: 2.5rem;
+  background-color: #ccc;
 }
 
 .offers .card .more-info .title-details {
@@ -203,6 +242,19 @@ section.offers h2 {
 
 .offers .card .more-info p {
   margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.offers .card .more-info p::before {
+  content: "\2713";
+  display: inline-block;
+  margin-right: 0.5rem;
+  position: absolute;
+  left: -0.5rem;
+  color: #0061ff;
+  font-weight: 700;
+  font-size: 1.8rem;
 }
 
 /*------------
@@ -258,7 +310,7 @@ Debug
   border: 1px solid black;
 } */
 
-.debug section.offers > * {
+/* .debug section.offers > * {
   border: 1px solid red;
 }
 
@@ -277,4 +329,4 @@ Debug
 .debug .offers .plan-cards .card {
   background-color: aqua;
   height: 100vh;
-}
+} */
