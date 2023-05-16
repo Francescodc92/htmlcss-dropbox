@@ -26,10 +26,19 @@ Generals
   margin-inline: auto;
 }
 
+.small-container {
+  max-width: 100rem;
+  margin-inline: auto;
+}
+
+section:not(section.hero) {
+  margin-block: 10rem;
+}
+
 button {
   border: none;
   background-color: transparent;
-  padding: 0.8rem 1.3rem;
+  padding: 1.5rem 2rem;
   color: #fff;
   cursor: pointer;
 }
@@ -71,8 +80,7 @@ header nav ul {
 
 header nav ul li a {
   text-transform: capitalize;
-  color: #000;
-  font-weight: 400;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 header nav ul li + li {
@@ -88,7 +96,7 @@ section.hero {
 
 section.hero .hero-container {
   position: relative;
-  top: 8vh;
+  top: 8rem;
 }
 
 section.hero .hero-container h1.title {
@@ -117,17 +125,84 @@ section.hero .hero-container .hero-bottom .left p {
 
 section.hero .hero-container .hero-bottom .left span {
   margin-top: 2rem;
-  margin-bottom: 8rem;
   display: block;
+  margin-bottom: 2rem;
 }
 
 section.hero .hero-container .hero-bottom .left .hero-icon {
-  margin-bottom: 8rem;
-  font-size: 3.2rem;
+  margin-bottom: 10rem;
+  font-size: 4rem;
 }
 
 section.hero .hero-container .hero-bottom .right {
   width: 60%;
+}
+
+/*------------
+section offerts
+-------------*/
+section.offers h2 {
+  font-size: 3rem;
+  padding-block: 2.4rem;
+}
+
+.offers .plans-tipe {
+  display: flex;
+}
+
+.offers .plans-tipe > * {
+  margin-block: 2.5rem;
+}
+
+.offers .plans-tipe div:nth-child(2) {
+  margin-left: 3rem;
+}
+
+/*----cards planes-----*/
+.offers .plan-cards {
+  display: flex;
+}
+
+.offers .plan-cards .card {
+  width: calc((100% - 4%) / 3);
+  border: 0.1rem solid #ccc;
+}
+
+.offers .plan-cards .card:nth-child(2) {
+  margin-inline: 4%;
+}
+
+.offers .plan-cards .card .card-title {
+  text-align: center;
+  padding-block: 1rem;
+  border-bottom: 0.1rem solid #ccc;
+}
+
+.offers .card .plane-info,
+.offers .card .more-info {
+  padding: 0 2rem 2.5rem;
+}
+
+.offers .card .plane-info .price {
+  margin-block: 2.5rem;
+}
+
+.offers .card .plane-info .plane-details {
+  margin-block: 2.5rem;
+}
+
+.offers .card .plane-info button {
+  margin-block: 2.5rem;
+  width: 100%;
+}
+
+.offers .card .more-info .title-details {
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+
+.offers .card .more-info p {
+  margin-bottom: 2rem;
 }
 
 /*------------
@@ -141,7 +216,8 @@ header nav ul li a::after {
   content: "";
   width: 0;
   height: 0.2rem;
-  margin-top: 0.5rem;
+  position: relative;
+  top: 0.8rem;
   display: block;
   background-color: #0061ff;
   transition: width 800ms ease-in-out;
@@ -150,6 +226,7 @@ header nav ul li a::after {
 header nav ul li:hover a:not(#logo):after {
   width: 100%;
 }
+
 /*------------
 Debug
 -------------*/
@@ -180,3 +257,24 @@ Debug
 .debug section.hero .hero-container .hero-bottom > * {
   border: 1px solid black;
 } */
+
+.debug section.offers > * {
+  border: 1px solid red;
+}
+
+.debug section.offers h2 {
+  background-color: aqua;
+}
+
+.debug .offers .plans-tipe > * {
+  background-color: blueviolet;
+}
+
+.debug .offers .plan-cards {
+  background-color: brown;
+}
+
+.debug .offers .plan-cards .card {
+  background-color: aqua;
+  height: 100vh;
+}
