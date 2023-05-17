@@ -65,6 +65,15 @@ img {
   color: #0061ff;
 }
 
+.my-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-1-3 {
+  width: calc(100% / 3);
+}
+
 /*------------
 Header
 -------------*/
@@ -144,7 +153,7 @@ section.hero .hero-container .hero-bottom .right {
 }
 
 /*------------
-section offerts
+section offerts 
 -------------*/
 section.offers h2 {
   font-size: 3rem;
@@ -163,90 +172,103 @@ section.offers h2 {
   margin-left: 3rem;
 }
 
-/*----cards planes-----*/
 .offers .plans-tipe * {
   cursor: pointer;
 }
-.offers .plan-cards {
-  display: flex;
-}
 
-.offers .plan-cards .card {
-  width: calc((100% - 4%) / 3);
+/*-----------
+cards planes
+------------*/
+.my-row.cards {
+  margin-inline: -1rem;
+}
+.col-1-3.card {
+  width: calc((100% / 3) - 2rem);
+  margin-inline: 1rem;
   border: 0.1rem solid #ebebec;
 }
 
-.offers .plan-cards .card:nth-child(2) {
-  margin-inline: 4%;
-}
-
-.offers .plan-cards .card .card-title {
+.col-title {
   text-align: center;
   padding-block: 1rem;
   border-bottom: 0.1rem solid #ebebec;
 }
 
-.offers .card .plane-info,
-.offers .card .more-info {
-  padding: 0 2rem 2.5rem;
-}
-
-.offers .card .plane-info .price {
-  margin-block: 2.5rem;
-}
-
-.offers .card .plane-info .price h3 {
-  font-size: 2.4rem;
-  margin-bottom: 2rem;
-}
-
-.offers .card .plane-info .price span.value {
-  font-weight: 600;
-}
-
-.offers .card .plane-info .price span.frequency {
-  display: block;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.offers .card .plane-info .plane-details {
-  margin-block: 2.5rem;
-}
-
-.offers .card .plane-info .plane-details p {
-  margin-bottom: 1rem;
-}
-.offers .card .plane-info .plane-details p i {
-  font-size: 1.4rem;
+.col-title i {
   margin-right: 0.5rem;
 }
 
-.offers .card .plane-info button {
-  margin-block: 2.5rem;
-  width: 100%;
+.offer-description,
+.more-info {
+  padding: 3rem 2rem;
 }
 
-.offers .card .plane-info::after {
+.offer-description::after {
   content: "";
   width: 5rem;
-  height: 0.1rem;
+  height: 0.15rem;
   display: block;
   margin-top: 2.5rem;
   background-color: #ccc;
 }
 
-.offers .card .more-info .title-details {
+.offer-description h3 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+.offer-description > span {
+  margin-block: 1rem;
+  display: block;
+}
+
+.offer-description span.price {
+  font-weight: 600;
+}
+
+.offer-description span.frequency {
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 2.5rem;
+}
+
+.offer-description ul {
+  min-height: 20rem;
+}
+.offer-description ul li {
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.offer-description ul li i {
+  position: absolute;
+  top: 0.5rem;
+  left: -0.7rem;
+}
+
+.offer-description ul li span {
+  font-size: 1.4rem;
+  padding-left: 0.2rem;
+}
+
+.offer-description button.primary {
+  margin-block: 2.5rem;
+  width: 100%;
+}
+
+.more-info .title-details {
   font-weight: 700;
   margin-bottom: 2.5rem;
 }
 
-.offers .card .more-info p {
+.more-info ul li {
   margin-bottom: 2rem;
   padding-left: 1.5rem;
   position: relative;
 }
 
-.offers .card .more-info p::before {
+.more-info ul li::before {
   content: "\2713";
   display: inline-block;
   margin-right: 0.5rem;
@@ -255,6 +277,49 @@ section.offers h2 {
   color: #0061ff;
   font-weight: 700;
   font-size: 1.8rem;
+}
+
+/*-----card full-------*/
+.col-full.card {
+  width: calc(100% - 2rem);
+  margin-inline: 1rem;
+  margin-top: 2rem;
+  border: 0.1rem solid #ebebec;
+}
+
+.col-full.card .content-container {
+  display: flex;
+}
+
+.col-full.card .content-container .card-left,
+.col-full.card .content-container .card-right {
+  padding: 3rem 2rem;
+}
+
+.col-full.card .content-container .card-left {
+  width: 70%;
+}
+
+.col-full.card .content-container .card-right {
+  width: 30%;
+}
+
+.col-full.card .content-container .card-right button.primary {
+  width: 100%;
+}
+
+.card-left h3 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+.card-left h4 {
+  margin-bottom: 3rem;
+  font-size: 1.4rem;
+}
+
+.card-left p {
+  font-size: 1.4rem;
 }
 
 /*------------
@@ -310,23 +375,10 @@ Debug
   border: 1px solid black;
 } */
 
-/* .debug section.offers > * {
+/* .debug .my-row {
   border: 1px solid red;
 }
 
-.debug section.offers h2 {
-  background-color: aqua;
-}
-
-.debug .offers .plans-tipe > * {
-  background-color: blueviolet;
-}
-
-.debug .offers .plan-cards {
-  background-color: brown;
-}
-
-.debug .offers .plan-cards .card {
-  background-color: aqua;
-  height: 100vh;
+.debug .col-full.card .content-container > * {
+  border: 1px solid blue;
 } */
