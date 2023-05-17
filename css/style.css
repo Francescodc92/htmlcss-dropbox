@@ -360,6 +360,10 @@ Section contact
 /*------------
 section benefits
 -------------*/
+.benefits h2 {
+  font-size: 3.2rem;
+  margin-bottom: 2.4rem;
+}
 .benefits .my-row {
   margin-inline: -1rem;
 }
@@ -367,6 +371,15 @@ section benefits
   width: calc((100% / 3) - 2rem);
   margin-inline: 1rem;
   margin-top: 3rem;
+}
+
+.benefits .col-1-3 .card-bottom h3 {
+  margin-block: 2rem;
+  font-size: 2.4rem;
+}
+
+.benefits .col-1-3 .card-bottom p {
+  margin-block: 2rem;
 }
 
 /*------------
@@ -428,17 +441,15 @@ Debug
   border: 1px solid black;
 } */
 
-.debug .benefits .my-row {
+/* .debug .benefits .my-row {
   border: 1px solid red;
 }
 
 .debug .benefits .my-row .col-1-3 {
   border: 1px solid blue;
-  height: 400px;
 }
 
 .debug .benefits .my-row .col-1-3 > * {
-  height: 50%;
   background-color: aqua;
   border: 1px solid green;
-}
+} */
