@@ -31,6 +31,10 @@ Generals
   margin-inline: auto;
 }
 
+.flex {
+  display: flex;
+}
+
 section:not(section.hero) {
   margin-block: 10rem;
 }
@@ -46,6 +50,12 @@ button {
 button.primary {
   background-color: #0061ff;
   transition: background-color 500ms ease-in-out;
+}
+
+button.secondary {
+  color: rgba(0, 0, 0, 0.7);
+  border: 0.2rem solid rgba(0, 0, 0, 0.7);
+  transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
 }
 
 ul {
@@ -323,10 +333,41 @@ cards planes
 }
 
 /*------------
+Section contact
+-------------*/
+.contact .left {
+  width: 60%;
+}
+
+.contact .right {
+  width: 40%;
+  padding: 3.5rem;
+}
+
+.contact .right h2 {
+  font-size: 2.7rem;
+  padding-bottom: 2.4rem;
+}
+
+.contact .right p {
+  margin-bottom: 3rem;
+}
+
+.contact .right button.secondary {
+  font-size: 1.8rem;
+}
+
+/*------------
 Animations / effects
 -------------*/
 button.primary:hover {
   background-color: #3781f8;
+}
+
+button.secondary:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border: 0.2rem solid rgba(0, 0, 0, 0.7);
 }
 
 header nav ul li a::after {
