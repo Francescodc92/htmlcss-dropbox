@@ -91,6 +91,11 @@ img {
   width: calc(100% / 3);
 }
 
+section h2 {
+  font-size: 3rem;
+  padding-block: 2.4rem;
+}
+
 /*------------
 Header
 -------------*/
@@ -172,11 +177,6 @@ section.hero .hero-container .hero-bottom .right {
 /*------------
 section offerts 
 -------------*/
-section.offers h2 {
-  font-size: 3rem;
-  padding-block: 2.4rem;
-}
-
 .offers .plans-tipe {
   display: flex;
 }
@@ -367,10 +367,6 @@ Section contact
 /*------------
 section benefits
 -------------*/
-.benefits h2 {
-  font-size: 3.2rem;
-  margin-bottom: 2.4rem;
-}
 .benefits .my-row {
   margin-inline: -1rem;
 }
@@ -393,8 +389,6 @@ section partners
 -------------*/
 .partners h2 {
   max-width: 600px;
-  font-size: 4rem;
-  padding-block: 2.4rem;
 }
 .partners a.underline {
   display: inline-block;
@@ -513,7 +507,18 @@ section partners
 .partners .partners-bottom .right button.tertiary {
   padding-inline: 5rem;
 }
-
+/*------------
+section faq
+-------------*/
+.questions-list .question {
+  border-top: 0.1rem solid #000;
+  border-bottom: 0.1rem solid #000;
+  padding-block: 2.5rem;
+  padding-right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 /*------------
 Animations / effects
 -------------*/
@@ -603,3 +608,7 @@ Debug
   border: 1px solid blue;
   background-color: aqua;
 } */
+
+.debug .questions-list {
+  border: 1px solid red;
+}
