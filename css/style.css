@@ -358,6 +358,18 @@ Section contact
 }
 
 /*------------
+section benefits
+-------------*/
+.benefits .my-row {
+  margin-inline: -1rem;
+}
+.benefits .col-1-3 {
+  width: calc((100% / 3) - 2rem);
+  margin-inline: 1rem;
+  margin-top: 3rem;
+}
+
+/*------------
 Animations / effects
 -------------*/
 button.primary:hover {
@@ -416,10 +428,17 @@ Debug
   border: 1px solid black;
 } */
 
-/* .debug .my-row {
+.debug .benefits .my-row {
   border: 1px solid red;
 }
 
-.debug .col-full.card .content-container > * {
+.debug .benefits .my-row .col-1-3 {
   border: 1px solid blue;
-} */
+  height: 400px;
+}
+
+.debug .benefits .my-row .col-1-3 > * {
+  height: 50%;
+  background-color: aqua;
+  border: 1px solid green;
+}
