@@ -381,7 +381,30 @@ section benefits
 .benefits .col-1-3 .card-bottom p {
   margin-block: 2rem;
 }
+/*------------
+section partners
+-------------*/
+.partners .partners-container {
+  height: calc(100vw / 3);
+  margin-top: 15rem;
+}
 
+.partners .partners-container > * {
+  width: calc(100% / 3);
+  height: 100%;
+}
+
+.partners .partners-container .left,
+.partners .partners-container .right {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.partners .partners-container .left > *,
+.partners .partners-container .right > * {
+  width: 50%;
+  height: 50%;
+}
 /*------------
 Animations / effects
 -------------*/
@@ -453,3 +476,16 @@ Debug
   background-color: aqua;
   border: 1px solid green;
 } */
+.debug .partners .partners-container {
+  border: 1px solid red;
+}
+
+.debug .partners .partners-container > * {
+  border: 1px solid green;
+}
+
+.debug .partners .partners-container .left > *,
+.debug .partners .partners-container .right > * {
+  border: 1px solid blue;
+  background-color: aqua;
+}
