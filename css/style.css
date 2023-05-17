@@ -510,14 +510,35 @@ section partners
 /*------------
 section faq
 -------------*/
+.questions-list {
+  padding-top: 2.5rem;
+}
+
 .questions-list .question {
-  border-top: 0.1rem solid #000;
-  border-bottom: 0.1rem solid #000;
   padding-block: 2.5rem;
   padding-right: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-weight: 700;
+}
+
+.questions-list .question i {
+  font-size: 1.2rem;
+}
+
+.questions-list .question:nth-child(1) {
+  border-top: 0.1rem solid #000;
+  border-bottom: 0.1rem solid #000;
+}
+
+.questions-list .question + .question {
+  border-bottom: 0.1rem solid #000;
+}
+
+.questions-list .question:last-child {
+  border-top: none;
+  border-bottom: 0.1rem solid #000;
 }
 /*------------
 Animations / effects
@@ -608,7 +629,7 @@ Debug
   border: 1px solid blue;
   background-color: aqua;
 } */
-
+/* 
 .debug .questions-list {
   border: 1px solid red;
-}
+} */
