@@ -91,6 +91,10 @@ img {
   width: calc(100% / 3);
 }
 
+.col-1-5 {
+  width: calc(100% / 5);
+}
+
 section h2 {
   font-size: 3rem;
   padding-block: 2.4rem;
@@ -541,6 +545,26 @@ section faq
   border-bottom: 0.1rem solid #000;
 }
 /*------------
+footer
+-------------*/
+footer {
+  background-color: #000;
+  color: #fff;
+}
+
+footer .col-1-5 {
+  padding-block: 5rem;
+}
+
+footer ul li a {
+  color: #fff;
+}
+
+footer .linguage-container {
+  padding-block: 3rem;
+}
+
+/*------------
 Animations / effects
 -------------*/
 button.primary:hover {
@@ -633,3 +657,15 @@ Debug
 .debug .questions-list {
   border: 1px solid red;
 } */
+
+.debug footer > * {
+  border: 1px solid blue;
+}
+
+.debug footer .my-row > * {
+  border: 1px solid red;
+}
+
+.debug footer .linguage-container {
+  background-color: #a2d39b;
+}
