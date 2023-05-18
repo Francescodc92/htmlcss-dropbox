@@ -609,12 +609,32 @@ section faq
   padding-top: 2.5rem;
 }
 
+.questions-list .container-q-a .answer {
+  opacity: 0;
+  max-width: 0rem;
+  display: none;
+  transition: max-width 800ms ease-in-out, opacity 800ms ease-in-out;
+}
+
+.questions-list .container-q-a .answer ul li {
+  padding-block: 1rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.questions-list .container-q-a .answer ul li::before {
+  content: "-";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+}
+
 .questions-list .question {
-  padding-block: 2.5rem;
-  padding-right: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-block: 2.5rem;
+  padding-right: 2rem;
   font-weight: 700;
   transition: background-color 500ms ease-in-out;
 }
@@ -624,16 +644,16 @@ section faq
   transition: transform 500ms ease-in-out;
 }
 
-.questions-list .question:nth-child(1) {
+.questions-list .container-q-a:nth-child(1) {
   border-top: 0.1rem solid #000;
   border-bottom: 0.1rem solid #000;
 }
 
-.questions-list .question + .question {
+.questions-list .container-q-a + .container-q-a {
   border-bottom: 0.1rem solid #000;
 }
 
-.questions-list .question:last-child {
+.questions-list .container-q-a:last-child {
   border-top: none;
   border-bottom: 0.1rem solid #000;
 }
@@ -743,11 +763,17 @@ footer ul li a span::after {
 footer ul li:hover a span::after {
   width: 100%;
 }
-.questions-list .question:hover {
+.questions-list .container-q-a:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.questions-list .question:hover i {
+.questions-list .container-q-a:hover .answer {
+  display: block;
+  max-width: none;
+  opacity: 1;
+}
+
+.questions-list .container-q-a:hover i {
   transform: rotate(-90deg);
 }
 

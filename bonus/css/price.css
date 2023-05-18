@@ -1,0 +1,24 @@
+main {
+  min-height: 100vh;
+}
+
+section.offers#offers-section {
+  margin-top: 0;
+}
+
+section.offers#offers-section .cards .col-1-3.card {
+  margin-top: 2rem;
+}
+
+section.offers#offers-section .cards .col-full {
+  width: 100%;
+  text-align: center;
+}
+
+section.offers#offers-section .cards .col-full .content-container > * {
+  margin-block: 2rem;
+}
+
+section.offers#offers-section .cards .col-full .content-container h3 {
+  margin-block: 3rem;
+}
