@@ -83,6 +83,38 @@ img {
   color: #0061ff;
 }
 
+.hidden-in {
+  position: relative;
+}
+
+.container-hidden {
+  border: 1px solid blue;
+  width: 100%;
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  background-color: #fff;
+}
+
+.hidden {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hidden-title {
+  font-size: 1.6rem;
+}
+
+.hidden li {
+  font-size: 1.4rem;
+  margin-left: 0;
+  margin-bottom: 1rem;
+}
+
+.hidden li:first-of-type {
+  margin-top: 1rem;
+}
+
 .my-row {
   display: flex;
   flex-wrap: wrap;
