@@ -66,6 +66,24 @@ button.tertiary {
   font-size: 1.8rem;
 }
 
+/*------------
+Animations / effects
+-------------*/
+button.primary:hover {
+  background-color: #3781f8;
+}
+
+button.secondary:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border: 0.2rem solid rgba(0, 0, 0, 0.7);
+}
+
+button.tertiary:hover {
+  background-color: #3781f8;
+  color: #fff;
+}
+
 ul {
   list-style: none;
 }
@@ -191,6 +209,30 @@ header nav ul li + li {
   padding-left: 0.8rem;
 }
 
+header nav ul li a::after {
+  content: "";
+  width: 100%;
+  height: 0.2rem;
+  position: relative;
+  top: 1.5rem;
+  opacity: 0;
+  display: block;
+  background-color: #0061ff;
+  transition: top 800ms ease-in-out, opacity 800ms ease-in-out;
+}
+
+header .page-nav ul.navigation-header li:hover a.header-link:after,
+header .info ul.navigation-header li:hover a.header-link:after {
+  top: 0.3rem;
+  opacity: 1;
+}
+
+header nav.page-nav ul.navigation-header li:hover .container-hidden,
+header nav.info ul.navigation-header li:hover .container-hidden {
+  visibility: visible;
+  opacity: 1;
+}
+
 /*------------
 Main
 -------------*/
@@ -249,15 +291,15 @@ section.hero .hero-container .hero-bottom .right {
 /*------------
 section offerts 
 -------------*/
-.offers .plans-tipe {
+.plans-tipe {
   display: flex;
 }
 
-.offers .plans-tipe > * {
+.plans-tipe > * {
   margin-block: 2.5rem;
 }
 
-.offers .plans-tipe div:nth-child(2) {
+.plans-tipe div:nth-child(2) {
   margin-left: 3rem;
 }
 
@@ -610,10 +652,13 @@ section faq
 }
 
 .questions-list .container-q-a .answer {
-  opacity: 0;
-  max-width: 0rem;
   display: none;
-  transition: max-width 800ms ease-in-out, opacity 800ms ease-in-out;
+  opacity: 0;
+  /* transition: opacity 500ms ease-in-out;   */
+}
+.questions-list .container-q-a:hover .answer {
+  display: block;
+  opacity: 1;
 }
 
 .questions-list .container-q-a .answer ul li {
@@ -657,6 +702,15 @@ section faq
   border-top: none;
   border-bottom: 0.1rem solid #000;
 }
+
+.questions-list .container-q-a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.questions-list .container-q-a:hover i {
+  transform: rotate(-90deg);
+}
+
 /*------------
 footer
 -------------*/
@@ -708,48 +762,6 @@ footer .linguage-container i:first-of-type {
   margin-right: 0.5rem;
 }
 
-/*------------
-Animations / effects
--------------*/
-button.primary:hover {
-  background-color: #3781f8;
-}
-
-button.secondary:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  border: 0.2rem solid rgba(0, 0, 0, 0.7);
-}
-
-button.tertiary:hover {
-  background-color: #3781f8;
-  color: #fff;
-}
-
-header nav ul li a::after {
-  content: "";
-  width: 100%;
-  height: 0.2rem;
-  position: relative;
-  top: 1.5rem;
-  opacity: 0;
-  display: block;
-  background-color: #0061ff;
-  transition: top 800ms ease-in-out, opacity 800ms ease-in-out;
-}
-
-header .page-nav ul.navigation-header li:hover a.header-link:after,
-header .info ul.navigation-header li:hover a.header-link:after {
-  top: 0.3rem;
-  opacity: 1;
-}
-
-header nav.page-nav ul.navigation-header li:hover .container-hidden,
-header nav.info ul.navigation-header li:hover .container-hidden {
-  visibility: visible;
-  opacity: 1;
-}
-
 footer ul li a span::after {
   content: "";
   width: 0;
@@ -763,20 +775,6 @@ footer ul li a span::after {
 footer ul li:hover a span::after {
   width: 100%;
 }
-.questions-list .container-q-a:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.questions-list .container-q-a:hover .answer {
-  display: block;
-  max-width: none;
-  opacity: 1;
-}
-
-.questions-list .container-q-a:hover i {
-  transform: rotate(-90deg);
-}
-
 /*------------
 Debug
 -------------*/
