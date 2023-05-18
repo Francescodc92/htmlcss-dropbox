@@ -64,7 +64,7 @@ Section offert-comparation
   display: flex;
   width: 100%;
   position: sticky;
-  top: 5rem;
+  top: 7rem;
   background-color: #fff;
 }
 
@@ -78,14 +78,67 @@ Section offert-comparation
   font-size: 2.4rem;
 }
 
+.header-row .col-1-6 {
+  padding: 2rem;
+}
+
+.header-row .col-1-6.beast-offert {
+  position: relative;
+}
+.header-row .col-1-6.beast-offert::before {
+  content: "Miglior rapposto qualità prezzo";
+  background-color: #000;
+  color: #fff;
+  font-size: 1.4rem;
+  padding-block: 0.5rem;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header-row .col-1-6 h4 {
+  font-size: 2.4rem;
+  margin: 3.5rem 0 2.5rem;
+}
+
+.header-row .col-1-6 span {
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 2.5rem;
+}
+
+.header-row .col-1-6 button.primary {
+  width: 100%;
+  margin-block: 2rem;
+}
+
+.cards-comparation .col-1-6.row-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cards-comparation .col-1-6.row-title span {
+  width: 60%;
+}
+.cards-comparation .col-1-6 > * {
+  padding-block: 2rem;
+  padding-inline: 1rem;
+}
+
+.cards-comparation .col-1-6:not(.col-1-6.row-title) i {
+  color: #0061fe;
+}
+
+.cards-comparation .col-1-6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /*-----------
 Debug
 -----------*/
-.debug .header-row .col-1-6 {
-  background-color: blue;
-  height: 400px;
-}
-.debug .col-1-6 {
-  background-color: aqua;
-  height: 400px;
-}
