@@ -83,17 +83,20 @@ img {
   color: #0061ff;
 }
 
+.partners-container .active {
+  border: 1rem solid rgba(255, 255, 255, 0.5);
+}
+
 .hidden-in {
   position: relative;
 }
 
 .container-hidden {
-  border: 1px solid blue;
-  width: 100%;
   position: absolute;
   top: 5rem;
   left: 0;
   background-color: #fff;
+  display: flex;
 }
 
 .hidden {
@@ -162,6 +165,11 @@ header nav ul li a {
 
 header nav ul li + li {
   margin-left: 2rem;
+}
+
+.container-hidden > * {
+  padding-right: 5rem;
+  padding-left: 0.8rem;
 }
 
 /*------------
@@ -521,7 +529,6 @@ section partners
 
 .partners .partners-container .left div:nth-child(1) {
   background-color: #a2d39b;
-  border: 1rem solid #d1e9cd;
 }
 
 .partners .partners-container .left div:nth-child(2) {
@@ -790,3 +797,13 @@ Debug
 .debug footer .linguage-container {
   background-color: #a2d39b;
 } */
+
+/*---bonus----*/
+.debug .container-hidden {
+  border: 1px solid blue;
+}
+
+.debug .container-hidden > * {
+  border: 1px solid green;
+  background-color: aqua;
+}

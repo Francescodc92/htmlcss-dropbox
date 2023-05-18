@@ -83,6 +83,10 @@ img {
   color: #0061ff;
 }
 
+.partners-container .active {
+  border: 1rem solid rgba(255, 255, 255, 0.5);
+}
+
 .my-row {
   display: flex;
   flex-wrap: wrap;
@@ -489,7 +493,6 @@ section partners
 
 .partners .partners-container .left div:nth-child(1) {
   background-color: #a2d39b;
-  border: 1rem solid #d1e9cd;
 }
 
 .partners .partners-container .left div:nth-child(2) {
