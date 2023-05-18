@@ -92,14 +92,21 @@ img {
 }
 
 .container-hidden {
+  overflow: hidden;
   position: absolute;
   top: 5rem;
   left: 0;
   background-color: #eee;
   display: flex;
   opacity: 0;
+  visibility: hidden;
+  transition: opacity 800ms ease-in-out;
+}
 
-  transition: opacity 800ms ease-in;
+.container-hidden.active {
+  /* per js */
+  opacity: 1;
+  visibility: visible;
 }
 
 .hidden {
@@ -123,7 +130,7 @@ img {
 .hidden li a {
   width: 100%;
   display: block;
-  margin-right: 5rem;
+  padding-right: 5rem;
 }
 
 .hidden li:first-of-type {
@@ -719,6 +726,7 @@ header .info ul.navigation-header li:hover a.header-link:after {
 
 header nav.page-nav ul.navigation-header li:hover .container-hidden,
 header nav.info ul.navigation-header li:hover .container-hidden {
+  visibility: visible;
   opacity: 1;
 }
 
