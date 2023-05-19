@@ -651,14 +651,19 @@ section faq
   padding-top: 2.5rem;
 }
 
+.questions-list .container-q-a {
+  transition: height 500ms ease-in-out;
+}
+
 .questions-list .container-q-a .answer {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
   opacity: 0;
-  /* transition: opacity 500ms ease-in-out;   */
+  transition: max-height 1s ease-in-out, opacity 1s ease-in-out;
 }
 .questions-list .container-q-a:hover .answer {
-  display: block;
   opacity: 1;
+  max-height: 300px; /*la transizione funziona ma solo se ha dei valori fissi , non funziona con il 100%*/
 }
 
 .questions-list .container-q-a .answer ul li {
