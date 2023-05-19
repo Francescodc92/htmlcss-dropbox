@@ -117,8 +117,8 @@ img {
   background-color: #eee;
   display: flex;
   opacity: 0;
-  visibility: hidden;
-  transition: opacity 800ms ease-in-out;
+  max-height: 0;
+  transition: opacity 800ms ease-in-out, max-height 500ms ease-in-out;
 }
 
 .container-hidden.active {
@@ -229,7 +229,7 @@ header .info ul.navigation-header li:hover a.header-link:after {
 
 header nav.page-nav ul.navigation-header li:hover .container-hidden,
 header nav.info ul.navigation-header li:hover .container-hidden {
-  visibility: visible;
+  max-height: 50rem;
   opacity: 1;
 }
 
