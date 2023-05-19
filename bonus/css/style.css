@@ -657,13 +657,13 @@ section faq
 
 .questions-list .container-q-a .answer {
   max-height: 0;
-  overflow: hidden;
+  overflow: auto;
   opacity: 0;
   transition: max-height 1s ease-in-out, opacity 1s ease-in-out;
 }
 .questions-list .container-q-a:hover .answer {
   opacity: 1;
-  max-height: 300px; /*la transizione funziona ma solo se ha dei valori fissi , non funziona con il 100%*/
+  max-height: 30rem; /*la transizione funziona ma solo se ha dei valori fissi , non funziona con il 100%*/
 }
 
 .questions-list .container-q-a .answer ul li {
