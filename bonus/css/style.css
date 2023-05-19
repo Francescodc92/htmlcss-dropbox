@@ -50,19 +50,19 @@ button {
 
 button.primary {
   background-color: #0061ff;
-  transition: background-color 500ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
 }
 
 button.secondary {
   color: rgba(0, 0, 0, 0.7);
   border: 0.2rem solid rgba(0, 0, 0, 0.7);
-  transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
+  transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
 }
 
 button.tertiary {
   color: rgba(0, 0, 0, 0.7);
   background-color: #fff;
-  transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
+  transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
   font-size: 1.8rem;
 }
 
@@ -118,7 +118,7 @@ img {
   display: flex;
   opacity: 0;
   max-height: 0;
-  transition: opacity 800ms ease-in-out, max-height 500ms ease-in-out;
+  transition: opacity 200ms ease-in-out, max-height 200ms ease-in-out;
 }
 
 .container-hidden.active {
@@ -218,7 +218,7 @@ header nav ul li a::after {
   opacity: 0;
   display: block;
   background-color: #0061ff;
-  transition: top 800ms ease-in-out, opacity 800ms ease-in-out;
+  transition: top 200ms ease-in-out, opacity 200ms ease-in-out;
 }
 
 header .page-nav ul.navigation-header li:hover a.header-link:after,
@@ -652,14 +652,14 @@ section faq
 }
 
 .questions-list .container-q-a {
-  transition: height 500ms ease-in-out;
+  transition: height 200ms ease-in-out;
 }
 
 .questions-list .container-q-a .answer {
   max-height: 0;
   overflow: auto;
   opacity: 0;
-  transition: max-height 1s ease-in-out, opacity 1s ease-in-out;
+  transition: max-height 500ms ease-in-out, opacity 500ms ease-in-out;
 }
 .questions-list .container-q-a:hover .answer {
   opacity: 1;
@@ -686,12 +686,12 @@ section faq
   padding-block: 2.5rem;
   padding-right: 2rem;
   font-weight: 700;
-  transition: background-color 500ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
 }
 
 .questions-list .question i {
   font-size: 1.2rem;
-  transition: transform 500ms ease-in-out;
+  transition: transform 200ms ease-in-out;
 }
 
 .questions-list .container-q-a:nth-child(1) {
@@ -775,7 +775,7 @@ footer ul li a span::after {
   top: 0.8rem;
   display: block;
   background-color: #0061ff;
-  transition: width 800ms ease-in-out;
+  transition: width 200ms ease-in-out;
 }
 footer ul li:hover a span::after {
   width: 100%;
